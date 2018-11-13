@@ -137,7 +137,7 @@ body {
 .menu-item-info .progress .progress-bar {
   background: #fff;
 }
-.menu-item-info-box-icon {
+.menu-item-info-box-icon {  
   border-top-left-radius: 2px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
