@@ -1,0 +1,12 @@
+<!--Como minha estrutura de restaurants se repetia eu criei um componet para representa-los mais facilmente-->
+<a href="#">
+  <div class="place-info-box">
+    <span class="place-info-box-icon"><img [src]="domRestaurant.imagePath" /></span>
+    <div class="place-info-box-content">
+      <span class="place-info-box-text">{{domRestaurant.name}}</span>
+      <span class="place-info-box-star"><i class="fa fa-star"></i> {{domRestaurant.rating}}</span>
+      <span class="place-info-box-detail">{{domRestaurant.category}}</span>
+      <span class="place-info-box-detail">{{domRestaurant.deliveryEstimate}}</span>
+    </div>
+  </div>
+</a>
