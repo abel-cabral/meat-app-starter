@@ -22,4 +22,10 @@ export class RestarantsService {
       /* Em caso de arreo chama minha classe de error rodando a mensagem de error */
       .catch(ErrorHandler.handlerError);
   }
+
+  restaurantById(id: string): Observable<Restaurant> {
+    return this.http.get(this.url + '/restaurants/' + id)
+      .map(response => response.json())
+      .catch(ErrorHandler.handlerError);
+  }
 }

@@ -5,8 +5,7 @@ import { RestarantsService } from './restaurant/restaurants.service';
 
 @Component({
   selector: 'mt-restaurants',
-  templateUrl: './restaurants.component.html',
-  styleUrls: ['./restaurants.component.css']
+  templateUrl: './restaurants.component.html',  
 })
 export class RestaurantsComponent implements OnInit {
   /*Objeto recebendo seu Tipo, assim poderei usar no meu component restaurant usando um ngFor do que eu receber*/
@@ -15,7 +14,7 @@ export class RestaurantsComponent implements OnInit {
   constructor(private restaurantsService: RestarantsService) { }
 
   /*Funcáo nativa, melhor pra iniciar os componentes*/
-  ngOnInit() {    
+  ngOnInit() {
     /*Como a funcao retorna um Observable, faco um subscrible que ira executar uma funcao x sempre que um dado novo chegar*/
     this.restaurantsService.loadRestaurants().subscribe(response => this.restaurants = response);
    }
