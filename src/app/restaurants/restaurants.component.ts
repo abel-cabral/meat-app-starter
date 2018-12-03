@@ -5,7 +5,7 @@ import { RestarantsService } from './restaurant/restaurants.service';
 
 @Component({
   selector: 'mt-restaurants',
-  templateUrl: './restaurants.component.html',  
+  templateUrl: './restaurants.component.html'
 })
 export class RestaurantsComponent implements OnInit {
   /*Objeto recebendo seu Tipo, assim poderei usar no meu component restaurant usando um ngFor do que eu receber*/

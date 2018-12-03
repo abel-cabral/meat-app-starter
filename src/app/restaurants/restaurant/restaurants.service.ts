@@ -1,3 +1,4 @@
+import { MenuItem } from './../../restaurant-detail/menu-item/menu-item.model';
 import { ErrorHandler } from './../../app.error-handler';
 import { Restaurant } from './restaurant.model';
 import { Injectable } from '@angular/core';
@@ -27,5 +28,18 @@ export class RestarantsService {
     return this.http.get(this.url + '/restaurants/' + id)
       .map(response => response.json())
       .catch(ErrorHandler.handlerError);
+  }
+
+  /*Pega os reviews do restaurante*/
+  reviewsOfRestaurant(id: string): Observable<any>{   
+    return this.http.get(this.url + '/restaurants/' + id + '/reviews')
+      .map(response => response.json())
+      .catch(ErrorHandler.handlerError);
+  }
+
+  menuOfRestaurant(id: string): Observable<MenuItem[]>{
+    return this.http.get(this.url + '/restaurants/' + id + '/menu')
+    .map(response => response.json())
+    .catch(ErrorHandler.handlerError);
   }
 }
